@@ -3,16 +3,13 @@ import random
 from re import UNICODE
 import discord
 from discord import FFmpegPCMAudio
-from discord.ext.commands import context
-from dotenv import load_dotenv
 from discord.ext.commands import Bot
 import requests
 from youtube_dl import YoutubeDL
 from youtubesearchpython import SearchVideos
 import json
 
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+TOKEN = ''
 BOT_PREFIX = '?'
 
 ydl_opts = {'format': 'bestaudio', 'noplaylist': 'True'}
@@ -35,9 +32,17 @@ radioDict = {
     'christmas': [
         'http://46.105.118.14:24000/',
         'http://uk1.internet-radio.com:8231/'
+    ],
+    'fusion': [
+        'http://uk6.internet-radio.com:8346/'
+    ],
+    'funk': [
+        'http://5.39.82.157:8054/'
+    ],
+    'lo-fi': [
+        'http://82.14.214.56:8000/'
     ]
 }
-
 
 @client.command(name='DJ', aliases=['dj'])
 async def dj(ctx):
@@ -78,7 +83,6 @@ async def yt_search(ctx, arg):
 
     search = SearchVideos(arg ,offset=1, mode='json', max_results=20)
     results = json.loads(UNICODE(open(search.result(), "ISO-8859-1")))['search_result']
-
 
     print(results[0])
 

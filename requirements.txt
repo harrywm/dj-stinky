@@ -1,0 +1,5 @@
+discord.py
+discord.py[voice]
+requests
+youtube_dl
+youtube-search-python
