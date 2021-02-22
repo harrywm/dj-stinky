@@ -22,7 +22,7 @@ client = Bot(command_prefix=BOT_PREFIX)
 
 radioDict = {
     'dave': [
-        'http://uk6.internet-radio.com:8179/',
+        'http://onlineradiobox.com/uk/soulcentral/player/?cs=uk.soulcentral&played=1',
     ],
     'megaton': [
         'http://us2.internet-radio.com:8443/'
@@ -86,15 +86,15 @@ async def yt_search(ctx, arg):
     print(arg)
 
     search = SearchVideos(arg ,offset=1, mode='json', max_results=20)
-    results = json.loads(UNICODE(open(search.result(), "ISO-8859-1")))['search_result']
+    results = json.loads(UNICODE(open(search.result())))['search_result']
 
     print(results[0])
 
     for result in results:
         title = result['title']
         thumb = requests.get(result['thumbnails'][0]).content
-        ctx.send(f'Result: ${title}')
-        ctx.send(discord.File(thumb))
+        await ctx.send(f'Result: ${title}')
+        await ctx.send(discord.File(thumb))
 
 
 @client.command(name='youtube-play', aliases=['yt-play', 'tube-play'], description='play youtube')
