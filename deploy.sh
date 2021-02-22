@@ -1,11 +1,12 @@
 
+## aws cli login
+aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 818224701131.dkr.ecr.eu-west-2.amazonaws.com
+
+
 #build docker image
 echo 'Build Docker Image...'
 docker build -t djstinky:latest . > /dev/null
 echo 'Done'
-
-## aws cli login
-aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 818224701131.dkr.ecr.eu-west-2.amazonaws.com
 
 #tag and push
 echo 'Tag and Push...'
