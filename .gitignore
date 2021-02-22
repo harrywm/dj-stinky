@@ -1,4 +1,5 @@
 /dj-stinky.pem
 /var.json
 tf/*
+tf/.terraform
 !tf/ex.tf

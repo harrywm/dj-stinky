@@ -14,4 +14,5 @@ docker push 818224701131.dkr.ecr.eu-west-2.amazonaws.com/dj_stinky_repo:latest
 #aws iam delete-role --role-name ecsTaskExecutionRole
 
 #tf init, apply, deploy
-aws ecs update-service --cluster dj_stinky_cluster --service dj-stinky-service
+aws ecs update-service --cluster dj_stinky_cluster --service dj-stinky-service > /dev/null
+echo 'Done'
