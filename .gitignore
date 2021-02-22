@@ -1,3 +1,4 @@
 /dj-stinky.pem
+/var.json
 tf/*
 !tf/ex.tf

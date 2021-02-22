@@ -9,7 +9,10 @@ from youtube_dl import YoutubeDL
 from youtubesearchpython import SearchVideos
 import json
 
-TOKEN = ''
+with open('var.json') as var:
+    token_raw = json.load(var)
+
+TOKEN = token_raw["token"]
 BOT_PREFIX = '?'
 
 ydl_opts = {'format': 'bestaudio', 'noplaylist': 'True'}
@@ -68,6 +71,7 @@ async def radio(ctx, arg):
 
     botPlayer.stop()
     print(radioStation)
+    await ctx.send(f'Playing {arg}')
     botPlayer.play(FFmpegPCMAudio(radioStation))
 
 
