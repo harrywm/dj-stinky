@@ -20,5 +20,5 @@ echo 'Done'
 
 #tf init, apply, deploy
 echo 'Update ECS Service...'
-aws ecs update-service --cluster dj_stinky_cluster --service dj-stinky-service > /dev/null
+aws ecs update-service --cluster dj_stinky_cluster --service dj-stinky-service --desired-tasks 1 > /dev/null
 echo 'Done'

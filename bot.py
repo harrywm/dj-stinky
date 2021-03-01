@@ -47,6 +47,24 @@ radioDict = {
     ]
 }
 
+def botDestroyer(member):
+    if member.bot is True:  
+        return False
+    else:
+        return True
+
+@client.event
+async def on_voice_state_update(member, before, after):
+
+    print(after.channel.members)
+    filteredMemberList = list(filter(botDestroyer, after.channel.members))
+    print(filteredMemberList)
+
+    if before.channel is not None:
+        if len(filteredMemberList) == 0:
+            for voice in client.voice_clients:
+                await voice.disconnect()
+
 @client.command(name='DJ', aliases=['dj'])
 async def dj(ctx):
     global botPlayer
