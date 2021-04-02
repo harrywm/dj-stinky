@@ -4,3 +4,4 @@
 tf/*
 tf/.terraform
 !tf/ex.tf
+stinky-buildenv.pem
