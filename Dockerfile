@@ -1,6 +1,6 @@
 FROM python:3
 
-LABEL DJ STINKY IN THE HOUSE
+LABEL DJ STINKY IN THE HOUSE LETS GOOOOOOOOOOO
 
 COPY ./requirements.txt /app/requirements.txt
 WORKDIR /app
