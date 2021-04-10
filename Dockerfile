@@ -10,8 +10,9 @@ RUN apt-get update -y && apt-get install -y \
     libnacl-dev \
     python3-dev \
     ffmpeg \
-    curl https://s3.amazonaws.com//aws-cloudwatch/downloads/latest/awslogs-agent-setup.py -O \
-    suod python ./awslogs-agent-setup.py --region eu-west-2
+    wget
+RUN wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb 
+RUN dpkg -i -E ./amazon-clouwatch-agent.deb
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app
 
