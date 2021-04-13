@@ -7,7 +7,7 @@ Mostly just an exercise in learning, and practicing CD techniques.
 DJ Stinky:
 - Infra declared as IaC in /tf
 - Deploys on push to master (webhook to Jenkins build).
-- Builds, tags and pushes to ECR from Jenkins (EC2)
+- Builds, tags and pushes to ECR from Jenkins (EC2 Hosted) 
 - Updates ECS Task definition, starts Cluster service.
 - Container logs through Cloudwatch agent.
 
