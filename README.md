@@ -1,7 +1,7 @@
 # dj-stinky     [![Build Status](http://ec2-3-8-139-22.eu-west-2.compute.amazonaws.com/buildStatus/icon?job=DJ+Stinky)](http://ec2-3-8-139-22.eu-west-2.compute.amazonaws.com/job/DJ%20Stinky/)
 DJ Stinky number 1 dj in all of discord
 
-Very basic discord.py bot - plays radio internet radio stations/youtube videos with ffmpeg.
+Very basic discord.py bot - plays internet radio stations/youtube videos with ffmpeg.
 Mostly just an exercise in learning, and practicing CD techniques.
 
 DJ Stinky:
