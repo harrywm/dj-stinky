@@ -2,8 +2,7 @@
 DJ Stinky number 1 dj in all of discord
 
 Very basic discord.py bot - plays internet radio stations/youtube videos with ffmpeg.
-Mostly just an exercise in learning, and practicing CD techniques. 
-Webhook test - 
+Mostly just an exercise in learning, and practicing CD techniques.  
 
 DJ Stinky:
 - Infra declared as IaC in /tf
